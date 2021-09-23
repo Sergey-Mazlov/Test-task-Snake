@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(SnakeController))]
 public class SnakeTail : MonoBehaviour
 {
     private Transform snakeHead;
@@ -15,9 +18,12 @@ public class SnakeTail : MonoBehaviour
     private void Awake()
     {
         snakeHead = Instantiate(snakePrefab, new Vector3(0, 1, 0), Quaternion.identity, transform);
-
         _positions.Add(snakeHead.position);
-        
+    }
+
+    private void Start()
+    {
+        _snakeController = GetComponent<SnakeController>();
     }
 
     private void FixedUpdate()

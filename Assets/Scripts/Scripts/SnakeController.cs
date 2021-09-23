@@ -20,10 +20,6 @@ public class SnakeController : MonoBehaviour
     
     void Awake()
     {
-#if UNITY_EDITOR
-        //QualitySettings.vSyncCount = 0;  // VSync must be disabled
-        Application.targetFrameRate = 60;
-#endif
         _mainCamera = Camera.main;
         _transform = obj.GetComponent<Transform>();
         _groundPlane = new Plane(Vector3.up, Vector3.zero);
@@ -45,25 +41,9 @@ public class SnakeController : MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
-            Vector3 position = _transform.position;
-            if (position.z > -roadSize && position.z < roadSize)
-            {
-                Vector3 worldPos = new Vector3(position.x, position.y, WorldPosition().z + _offset.z);
-                _transform.position = Vector3.Lerp(transform.position, worldPos, _t);
-            }
-            else if (position.z < -roadSize && WorldPosition().z + _offset.z > -roadSize)
-            {
-                Vector3 worldPos = new Vector3(position.x, position.y, WorldPosition().z + _offset.z);
-                _transform.position = Vector3.Lerp(transform.position, worldPos, _t);
-            }
-            else if (position.z > roadSize  && WorldPosition().z + _offset.z < roadSize)
-            {
-                Vector3 worldPos = new Vector3(position.x, position.y, WorldPosition().z + _offset.z);
-                _transform.position = Vector3.Lerp(transform.position, worldPos, _t);
-            }
-            
+
         }
-        _rigidbody.velocity = new Vector3(forwardSpeed, 0, 0);
+        _rigidbody.velocity = new Vector3(0, 0, forwardSpeed);
     }
     private Vector3 WorldPosition()
     {

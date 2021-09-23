@@ -3,47 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SnakeTail))]
+[RequireComponent(typeof(Rigidbody))]
 public class SnakeController : MonoBehaviour
 {
-    public GameObject obj;
     public float forwardSpeed = 10f;
-    public int lenght = 1;
-    public float roadSize;
-    
     private Plane _groundPlane;
-    private Transform _transform;
     private Rigidbody _rigidbody;
     private Camera _mainCamera;
-    private Vector3 _offset;
-    private SnakeTail _snakeTail;
-    private float _t = 0.2f;
+    private Vector3 _dir;
     
     void Awake()
     {
         _mainCamera = Camera.main;
-        _transform = obj.GetComponent<Transform>();
         _groundPlane = new Plane(Vector3.up, Vector3.zero);
-        _rigidbody = obj.GetComponent<Rigidbody>();
-
-        _snakeTail = GetComponent<SnakeTail>();
-        for (int i = 0; i < lenght; i++)
-        {
-            _snakeTail.AddSphere();
-        }
+        _rigidbody = GetComponent<Rigidbody>();
     }
     
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        _dir = Vector3.zero;
+        if (Input.GetMouseButton(0))
         {
-            _offset = _transform.position - WorldPosition();
+            _dir = (WorldPosition() - transform.position).normalized * 30f;
         }
-        else if (Input.GetMouseButton(0))
-        {
-
-        }
-        _rigidbody.velocity = new Vector3(0, 0, forwardSpeed);
+        _dir.y = 0;
+        _dir.z = forwardSpeed;
+        _rigidbody.velocity = _dir;
     }
     private Vector3 WorldPosition()
     {
@@ -57,4 +44,5 @@ public class SnakeController : MonoBehaviour
         
         return position;
     }
+    
 }

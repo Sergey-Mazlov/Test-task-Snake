@@ -985,9 +985,12 @@ MonoBehaviour:
   _snakeTail: {fileID: 0}
   diamondsRow: 8
   peopleRow: 7
+  randomSeed: 3
   wall: {fileID: 2183110896233771346, guid: 5dd9b0381078fce4999e1c7a3fef126a, type: 3}
   ground: {fileID: 4716633536643627580, guid: 2ef167b5cec2f5941aca6beb877871e8, type: 3}
   groups:
+  - {fileID: 3864815652112993370, guid: 71e1f6755c36c8b4b9643bfce863a21b, type: 3}
+  - {fileID: 5119126608998049621, guid: 2d40a5a947b76f947b3d30426769a0f2, type: 3}
   - {fileID: 9134167747774331722, guid: 5e933dfe28bca7c49b5f4671e8740b03, type: 3}
   diamond: {fileID: 4292667539421361688, guid: e4bd27232281da34ea13c916b5b288ac, type: 3}
   mine: {fileID: 3816523597463142996, guid: 1c6b1ebfbeec05d46aebe472f41127ee, type: 3}

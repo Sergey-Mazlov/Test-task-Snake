@@ -15,6 +15,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private SnakeTail _snakeTail;
     [SerializeField] private int diamondsRow;
     [SerializeField] private int peopleRow;
+    [SerializeField] private int randomSeed;
 
     [Header("Level Prefabs")] 
     [SerializeField] private GameObject wall;
@@ -32,6 +33,7 @@ public class LevelGenerator : MonoBehaviour
 
     private void Start()
     {
+        Random.seed = randomSeed;
         float levelLenght = duration * snakeSpeed;
 
         Transform wallLeftT = Instantiate(wall, transform).transform;
@@ -53,15 +55,56 @@ public class LevelGenerator : MonoBehaviour
             for (int j = 0; j < peopleRow; j++)
             {
                 GameObject rndObj = groups[Random.Range(0, groups.Count)];
-                Instantiate(rndObj, new Vector3(0, 0, z), Quaternion.identity, transform);
+                Instantiate(rndObj, new Vector3(0, 0, z), Quaternion.identity, transform).transform.localScale = 
+                    new Vector3(Random.Range(0,2)*2-1, 1, 1);
                 z += _stepPeople;
             }
             
             z += _betweenDistance;
-            
+
+            int diamondCounter = 0;
+            int mineCounter = 0;
             for (int j = 0; j < diamondsRow; j++)
             {
-                Instantiate(diamond, new Vector3(0, 0, z), Quaternion.identity, transform);
+                if (Random.Range(0, 3) > 1)
+                {
+                    float x = -3.5f;
+                    if (Random.value > 0.5f && diamondCounter < 3)
+                    {
+                        Instantiate(diamond, new Vector3(x, 1.5f, z), Quaternion.identity, transform);
+                        x += 3.5f;
+                        Instantiate(mine, new Vector3(x, 1.5f, z), Quaternion.identity, transform);
+                        x += 3.5f;
+                        Instantiate(diamond, new Vector3(x, 1.5f, z), Quaternion.identity, transform);
+                        diamondCounter++;
+                        mineCounter = 0;
+                    }
+                    else if ( mineCounter < 3 )
+                    {
+                        Instantiate(mine, new Vector3(x, 1.5f, z), Quaternion.identity, transform);
+                        x += 3.5f;
+                        Instantiate(diamond, new Vector3(x, 1.5f, z), Quaternion.identity, transform);
+                        x += 3.5f;
+                        Instantiate(mine, new Vector3(x, 1.5f, z), Quaternion.identity, transform);
+                        mineCounter++;
+                        diamondCounter = 0;
+                    }
+                }
+                else
+                {
+                    if (Random.value > 0.5f && diamondCounter < 2)
+                    {
+                        Instantiate(diamond, new Vector3(0, 1.5f, z), Quaternion.identity, transform);
+                        diamondCounter++;
+                        mineCounter = 0;
+                    }
+                    else if ( mineCounter < 2 )
+                    {
+                        Instantiate(mine, new Vector3(0, 1.5f, z), Quaternion.identity, transform);
+                        mineCounter++;
+                        diamondCounter = 0;
+                    }
+                }
                 z += _stepPeople;
             }
             

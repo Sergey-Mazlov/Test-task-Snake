@@ -13,10 +13,10 @@ public class Wall : MonoBehaviour
 
     private void Update()
     {
-        if (snakeTail.position.z <= distance)
+        /*if (snakeTail.position.z <= distance)
         {
             (Color first, Color second) = GameManager.Instance.SetRandomColors();
             _material.color = first;
-        }
+        }*/
     }
 }

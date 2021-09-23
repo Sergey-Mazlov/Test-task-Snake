@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(SnakeController))]
 public class SnakeTail : MonoBehaviour
 {
     
@@ -53,10 +50,12 @@ public class SnakeTail : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             AddSphere();
+            lenght++;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             RemoveSphere();
+            lenght++;
         }
     }
 
@@ -68,8 +67,6 @@ public class SnakeTail : MonoBehaviour
         _snakeHead = sphere;
         _positions.Insert(0, _snakeHead.position);
         sphere.GetComponent<Renderer>().material.color = _selfColor;
-
-        lenght++;
     }
 
     public void RemoveSphere()
@@ -113,12 +110,20 @@ public class SnakeTail : MonoBehaviour
         {
             case "Diamond":
                 //Collect
-                if(lenght < maxLenght) AddSphere();
+                if (lenght < maxLenght)
+                {
+                    AddSphere();
+                    lenght++;
+                }
                 break;
             case "Man":
                 //CompareColor
                 //GameOver or Collect
-                if(lenght < maxLenght) AddSphere();
+                if (lenght < maxLenght)
+                {
+                    AddSphere();
+                    lenght++;
+                }
                 break;
         }
     }

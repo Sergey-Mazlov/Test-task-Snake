@@ -3,18 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a5306310-4bd5-40c6-8302-4417f1eadadf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/ChangeWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/ChangeWall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Diamond.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Diamond.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Men.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Men.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Mine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Mine.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayGround.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayGround.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/LevelGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeTail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeTail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +20,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Documents/Project/Test/Assets/Scripts/PlayGround/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Wall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Documents/Project/Test/Assets/Scripts/PlayGround/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/LevelGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yV6OXF4zVs0VV94Vfi3wFws19Q" />
   <component name="ProjectViewState">
@@ -75,7 +71,7 @@
       <workItem from="1632324396869" duration="2445000" />
       <workItem from="1632386601316" duration="14963000" />
       <workItem from="1632427607786" duration="7950000" />
-      <workItem from="1632472732405" duration="3847000" />
+      <workItem from="1632472732405" duration="7561000" />
     </task>
     <servers />
   </component>

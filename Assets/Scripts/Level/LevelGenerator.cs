@@ -11,11 +11,11 @@ public class LevelGenerator : MonoBehaviour
 
     [Header("Level Settings")] 
     [SerializeField] private float duration;
-    [SerializeField] private float snakeSpeed;
     [SerializeField] private SnakeTail _snakeTail;
     [SerializeField] private int diamondsRow;
     [SerializeField] private int peopleRow;
     [SerializeField] private int randomSeed;
+    [SerializeField] private Transform water;
 
     [Header("Level Prefabs")] 
     [SerializeField] private GameObject wall;
@@ -24,6 +24,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private GameObject diamond;
     [SerializeField] private GameObject mine;
     [SerializeField] private GameObject changeWall;
+    [SerializeField] private GameObject finish;
 
     private float _stepPeople = 4.5f;
     private float _stepDiamond = 3.5f;
@@ -34,7 +35,7 @@ public class LevelGenerator : MonoBehaviour
     private void Start()
     {
         //Random.seed = randomSeed;
-        float levelLenght = duration * snakeSpeed;
+        float levelLenght = duration * GameManager.Instance.snakeForwardSpeed;
 
         Transform wallLeftT = Instantiate(wall, transform).transform;
         Transform wallRightT = Instantiate(wall, transform).transform;
@@ -43,10 +44,12 @@ public class LevelGenerator : MonoBehaviour
         wallLeftT.localScale = new Vector3(1, 1, levelLenght / wallLeftT.GetComponent<Renderer>().bounds.size.z);
         wallRightT.localScale = new Vector3(1, 1, levelLenght / wallRightT.GetComponent<Renderer>().bounds.size.z);
         groundT.localScale = new Vector3(1, 1, levelLenght / groundT.GetComponent<Renderer>().bounds.size.z);
+        water.localScale = new Vector3(10, 1, (levelLenght + 20f) / water.GetComponent<Renderer>().bounds.size.z);
 
         wallLeftT.position = new Vector3(-5.5f, 0.5f, levelLenght / 2);
         wallRightT.position = new Vector3(5.5f, 0.5f, levelLenght / 2);
         groundT.position = new Vector3(0, 0, levelLenght / 2);
+        water.position = new Vector3(0, -1, (levelLenght - 20f) / 2);
 
         int blockCount = (int)levelLenght / (int)(peopleRow * _stepPeople + diamondsRow * _stepDiamond + _betweenDistance * 2);
         float z = 0;
@@ -152,10 +155,9 @@ public class LevelGenerator : MonoBehaviour
                 mat.color = _firstColor;
             }
             #endregion
-            
             z += _betweenDistance / 2f;
-            
         }
+        Instantiate(finish, new Vector3(0, 0, z + _betweenDistance), Quaternion.identity, transform);
     }
 
 

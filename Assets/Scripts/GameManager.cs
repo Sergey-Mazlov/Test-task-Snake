@@ -1,12 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int diamondsCount;
-    public int deathsCount;
     public float snakeForwardSpeed;
-
+    private int _diamondsCount;
+    private int _deathsCount;
+    [SerializeField] private GameObject winPanel;
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private Text diamondText;
+    [SerializeField] private Text deathsText;
     #region Singleton
     public static GameManager Instance;
     private void Awake()
@@ -15,14 +19,27 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    private void Start()
+    public void ShowGameOverPanel()
     {
-        
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
-    private void Update()
+    public void ShowWinPanel()
     {
-
+        winPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
+    public void AddDiamonds()
+    {
+        _diamondsCount++;
+        diamondText.text = _diamondsCount.ToString();
+    }
+
+    public void AddDeaths()
+    {
+        _deathsCount++;
+        deathsText.text = _deathsCount.ToString();
+    }
 }

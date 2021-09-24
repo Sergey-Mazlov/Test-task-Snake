@@ -115,7 +115,7 @@ public class SnakeTail : MonoBehaviour
         switch (trn.tag)
         {
             case "Mine":
-                //GameOver
+                _gameManager.ShowGameOverPanel();
                 break;
         }
     }
@@ -125,7 +125,7 @@ public class SnakeTail : MonoBehaviour
         switch (other.tag)
         {
             case "Diamond":
-                _gameManager.diamondsCount++;
+                _gameManager.AddDeaths();
                 if (lenght < maxLenght)
                 {
                     AddSphere();
@@ -136,7 +136,7 @@ public class SnakeTail : MonoBehaviour
             case "Man":
                 if (other.GetComponent<Renderer>().material.color == _selfColor)
                 {
-                    _gameManager.deathsCount++;
+                    _gameManager.AddDiamonds();
                     if (lenght < maxLenght)
                     {
                         AddSphere();
@@ -146,11 +146,14 @@ public class SnakeTail : MonoBehaviour
                 }
                 else
                 { 
-                    //GameOver
+                    _gameManager.ShowGameOverPanel();
                 }
                 break;
             case "Wall":
                 SetColor(other.GetComponent<Renderer>().material.color);
+                break;
+            case "Finish":
+                _gameManager.ShowWinPanel();
                 break;
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +19,12 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
     #endregion
+
+    private void Start()
+    {
+        diamondText.text = "0";
+        deathsText.text = "0";
+    }
 
     public void ShowGameOverPanel()
     {

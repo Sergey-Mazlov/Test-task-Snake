@@ -125,7 +125,7 @@ public class SnakeTail : MonoBehaviour
         switch (other.tag)
         {
             case "Diamond":
-                _gameManager.AddDeaths();
+                _gameManager.AddDiamonds();
                 if (lenght < maxLenght)
                 {
                     AddSphere();
@@ -136,7 +136,7 @@ public class SnakeTail : MonoBehaviour
             case "Man":
                 if (other.GetComponent<Renderer>().material.color == _selfColor)
                 {
-                    _gameManager.AddDiamonds();
+                    _gameManager.AddDeaths();
                     if (lenght < maxLenght)
                     {
                         AddSphere();

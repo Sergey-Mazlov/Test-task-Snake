@@ -908,9 +908,8 @@ GameObject:
   m_Component:
   - component: {fileID: 434258662489735661}
   - component: {fileID: 434258662496710159}
-  - component: {fileID: 7114840740611757392}
   m_Layer: 0
-  m_Name: Men
+  m_Name: Man
   m_TagString: Man
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -951,20 +950,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &7114840740611757392
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434258662489447885}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 1.7
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0.03}
 --- !u!1 &434258662489447887
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,9 +960,10 @@ GameObject:
   m_Component:
   - component: {fileID: 434258662489735663}
   - component: {fileID: 434258662492557519}
+  - component: {fileID: 713028200641077466}
   m_Layer: 0
   m_Name: LowMan
-  m_TagString: Untagged
+  m_TagString: Man
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1076,3 +1062,17 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000050753355, y: -0.11353779, z: 0.059281282}
     m_Extent: {x: 0.8932843, y: 0.93164253, z: 0.17578909}
   m_DirtyAABB: 0
+--- !u!136 &713028200641077466
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434258662489447887}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0.03}

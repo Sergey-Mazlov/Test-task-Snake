@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 537781427596436231}
   - component: {fileID: 2347046185340032973}
   - component: {fileID: 4292667539421361691}
+  - component: {fileID: 3222314528348114973}
   m_Layer: 0
   m_Name: Diamond
   m_TagString: Diamond
@@ -101,3 +102,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &3222314528348114973
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4292667539421361688}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.894425
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

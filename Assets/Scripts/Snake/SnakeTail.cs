@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class SnakeTail : MonoBehaviour
     private List<Vector3> _positions = new List<Vector3>();
     private Color _selfColor;
     private Transform _snakeHead;
+    private GameManager _gameManager;
     
     
     private void Awake()
@@ -27,7 +29,7 @@ public class SnakeTail : MonoBehaviour
 
     private void Start()
     {
-        
+        _gameManager = GameManager.Instance;
     }
 
     private void FixedUpdate()
@@ -80,16 +82,33 @@ public class SnakeTail : MonoBehaviour
         lenght--;
     }
 
-    public void SetColor(Color color)
+    public void SetStartColor(Color color)
     {
         _selfColor = color;
-        _snakeHead.GetComponent<Renderer>().material.color = color;
+        _snakeHead.GetComponent<Renderer>().material.color = _selfColor;
         foreach (Transform trn in _snakeSphere)
         {
             trn.GetComponent<Renderer>().material.color = _selfColor;
         }
     }
-    
+    public void SetColor(Color color)
+    {
+        _selfColor = color;
+        StartCoroutine(ChangeColor());
+    }
+
+    private IEnumerator ChangeColor()
+    {
+        _snakeHead.GetComponent<Renderer>().material.color = _selfColor;
+        yield return new WaitForSeconds(1.25f / GameManager.Instance.snakeForwardSpeed);
+        foreach (Transform trn in _snakeSphere)
+        {
+            trn.GetComponent<Renderer>().material.color = _selfColor;
+            yield return new WaitForSeconds(1.25f / GameManager.Instance.snakeForwardSpeed);
+        }
+    }
+
+
     private void OnCollisionEnter(Collision other)
     {
         Transform trn = other.collider.transform;
@@ -97,9 +116,6 @@ public class SnakeTail : MonoBehaviour
         {
             case "Mine":
                 //GameOver
-                break;
-            case "Wall":
-                //ChageColor
                 break;
         }
     }
@@ -109,21 +125,32 @@ public class SnakeTail : MonoBehaviour
         switch (other.tag)
         {
             case "Diamond":
-                //Collect
+                _gameManager.diamondsCount++;
                 if (lenght < maxLenght)
                 {
                     AddSphere();
                     lenght++;
                 }
+                Destroy(other.gameObject);
                 break;
             case "Man":
-                //CompareColor
-                //GameOver or Collect
-                if (lenght < maxLenght)
+                if (other.GetComponent<Renderer>().material.color == _selfColor)
                 {
-                    AddSphere();
-                    lenght++;
+                    _gameManager.deathsCount++;
+                    if (lenght < maxLenght)
+                    {
+                        AddSphere();
+                        lenght++;
+                    }
+                    Destroy(other.gameObject);
                 }
+                else
+                { 
+                    //GameOver
+                }
+                break;
+            case "Wall":
+                SetColor(other.GetComponent<Renderer>().material.color);
                 break;
         }
     }

@@ -3,11 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="a5306310-4bd5-40c6-8302-4417f1eadadf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Group_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Group_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Group_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Group_4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Group_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Group_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/ChangeWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/ChangeWall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Diamond.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Diamond.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Men.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Men.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Mine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Mine.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayGround.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayGround.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/LevelGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeTail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeTail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +75,7 @@
       <workItem from="1632324396869" duration="2445000" />
       <workItem from="1632386601316" duration="14963000" />
       <workItem from="1632427607786" duration="7950000" />
+      <workItem from="1632472732405" duration="3847000" />
     </task>
     <servers />
   </component>

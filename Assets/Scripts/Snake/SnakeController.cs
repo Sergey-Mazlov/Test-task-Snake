@@ -7,19 +7,21 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class SnakeController : MonoBehaviour
 {
-    public float forwardSpeed = 10f;
+    
     private Plane _groundPlane;
     private Rigidbody _rigidbody;
     private Camera _mainCamera;
     private Vector3 _dir;
-    
-    void Awake()
+    private float _forwardSpeed;
+
+    private void Start()
     {
         _mainCamera = Camera.main;
         _groundPlane = new Plane(Vector3.up, Vector3.zero);
         _rigidbody = GetComponent<Rigidbody>();
+        _forwardSpeed = GameManager.Instance.snakeForwardSpeed;
     }
-    
+
 
     void FixedUpdate()
     {
@@ -29,7 +31,7 @@ public class SnakeController : MonoBehaviour
             _dir = (WorldPosition() - transform.position).normalized * 30f;
         }
         _dir.y = 0;
-        _dir.z = forwardSpeed;
+        _dir.z = _forwardSpeed;
         _rigidbody.velocity = _dir;
     }
     private Vector3 WorldPosition()

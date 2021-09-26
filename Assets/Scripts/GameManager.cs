@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
 {
     public float snakeForwardSpeed;
     public bool fever = false;
-    public Text fps;
 
     private int _diamondsCount;
     private int _deathsCount;
@@ -31,11 +30,7 @@ public class GameManager : MonoBehaviour
         diamondText.text = "0";
         deathsText.text = "0";
     }
-
-    private void Update()
-    {
-        fps.text = (1 / Time.deltaTime).ToString("0");
-    }
+    
 
     public void ShowGameOverPanel()
     {

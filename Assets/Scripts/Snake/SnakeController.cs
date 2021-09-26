@@ -12,26 +12,31 @@ public class SnakeController : MonoBehaviour
     private Rigidbody _rigidbody;
     private Camera _mainCamera;
     private Vector3 _dir;
-    private float _forwardSpeed;
 
     private void Start()
     {
         _mainCamera = Camera.main;
         _groundPlane = new Plane(Vector3.up, Vector3.zero);
         _rigidbody = GetComponent<Rigidbody>();
-        _forwardSpeed = GameManager.Instance.snakeForwardSpeed;
     }
 
 
     void FixedUpdate()
     {
         _dir = Vector3.zero;
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !GameManager.Instance.fever)
         {
             _dir = (WorldPosition() - transform.position).normalized * 30f;
         }
+        else if (GameManager.Instance.fever)
+        {
+            Vector3 pos = transform.position;
+            Vector3 target = new Vector3(0, 0.5f, pos.z);
+            _dir =  (target - pos).normalized * 30f * Vector3.Distance(target, pos);
+        }
+
+        _dir.z = GameManager.Instance.snakeForwardSpeed;
         _dir.y = 0;
-        _dir.z = _forwardSpeed;
         _rigidbody.velocity = _dir;
     }
     private Vector3 WorldPosition()

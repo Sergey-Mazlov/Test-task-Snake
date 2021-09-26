@@ -4,25 +4,26 @@
     <list default="true" id="a5306310-4bd5-40c6-8302-4417f1eadadf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/ChangeWall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ChangeWall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Diamond.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Diamond.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Man.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Man.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mine.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mine.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Snake.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Snake.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Wall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lighting Settings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lighting Settings.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/ChangeWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/ChangeWall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Diamond.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Diamond.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Ground.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Group_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Group_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Mine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Mine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Section_dmd.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Section_dmd.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resource/Prefab/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resource/Prefab/Wall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayGround.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayGround.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayGround/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayGround/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayGround/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayGround/ReflectionProbe-0.exr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/LevelGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeTail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Snake/SnakeTail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Water.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Water.shadergraph" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
@@ -39,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/Project/Test/Assets/Scripts/PlayGround/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Wall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/LevelSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/Project/Test/Assets/Scripts/PlayGround/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/LevelGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -89,6 +91,10 @@
       <workItem from="1632386601316" duration="14963000" />
       <workItem from="1632427607786" duration="7950000" />
       <workItem from="1632472732405" duration="9597000" />
+      <workItem from="1632486948616" duration="856000" />
+      <workItem from="1632487825772" duration="2456000" />
+      <workItem from="1632507339801" duration="3700000" />
+      <workItem from="1632646404713" duration="3200000" />
     </task>
     <servers />
   </component>

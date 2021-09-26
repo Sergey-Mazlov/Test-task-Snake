@@ -15,7 +15,7 @@ public class SnakeTail : MonoBehaviour
     private Color _selfColor;
     private Transform _snakeHead;
     private GameManager _gameManager;
-    
+    private ObjectPooler _pooler;
     
     private void Awake()
     {
@@ -29,6 +29,7 @@ public class SnakeTail : MonoBehaviour
 
     private void Start()
     {
+        _pooler = ObjectPooler.Instance;
         _gameManager = GameManager.Instance;
     }
 
@@ -47,17 +48,6 @@ public class SnakeTail : MonoBehaviour
         for (int i = 0; i < _snakeSphere.Count; i++)
         {
             _snakeSphere[i].position = Vector3.Lerp(_positions[i + 1], _positions[i], distance / sphereDiameter);
-        }
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            AddSphere();
-            lenght++;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            RemoveSphere();
-            lenght++;
         }
     }
 
@@ -108,18 +98,7 @@ public class SnakeTail : MonoBehaviour
         }
     }
 
-
-    private void OnCollisionEnter(Collision other)
-    {
-        Transform trn = other.collider.transform;
-        switch (trn.tag)
-        {
-            case "Mine":
-                _gameManager.ShowGameOverPanel();
-                break;
-        }
-    }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
@@ -131,10 +110,10 @@ public class SnakeTail : MonoBehaviour
                     AddSphere();
                     lenght++;
                 }
-                Destroy(other.gameObject);
+                _pooler.BackToThePool(other.gameObject);
                 break;
             case "Man":
-                if (other.GetComponent<Renderer>().material.color == _selfColor)
+                if (other.GetComponent<Renderer>().material.color == _selfColor ||  _gameManager.fever)
                 {
                     _gameManager.AddDeaths();
                     if (lenght < maxLenght)
@@ -142,7 +121,8 @@ public class SnakeTail : MonoBehaviour
                         AddSphere();
                         lenght++;
                     }
-                    Destroy(other.gameObject);
+                    //destroy
+                    other.gameObject.SetActive(false);
                 }
                 else
                 { 
@@ -154,6 +134,16 @@ public class SnakeTail : MonoBehaviour
                 break;
             case "Finish":
                 _gameManager.ShowWinPanel();
+                break;
+            case "Mine":
+                if (!_gameManager.fever)
+                {
+                    _gameManager.ShowGameOverPanel();
+                }
+                else
+                {
+                    _pooler.BackToThePool(other.gameObject);
+                }
                 break;
         }
     }
